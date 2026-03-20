@@ -59,7 +59,7 @@ export default buildConfig({
   editor: defaultLexical,
   db: sqliteAdapter({
     client: {
-      url: process.env.DATABASE_URL || '',
+      url: process.env.DATABASE_URL || 'file:./payload.db',
     },
   }),
   collections: [Pages, Posts, Media, Categories, Users],
